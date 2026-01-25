@@ -17,12 +17,16 @@ public class GameService {
 
     public GameState startGame(String category, String difficulty) {
         game = new GameState();
+    
         String[] words = categories.get(category);
         game.word = words[new Random().nextInt(words.length)];
-        game.attempts = difficulty.equals("Hard") ? 5 :
-                        difficulty.equals("Medium") ? 7 : 10;
+        game.maxAttempts = difficulty.equals("Hard") ? 5 :
+                           difficulty.equals("Medium") ? 7 : 10;
+        game.attempts = game.maxAttempts;
+        game.score = 0;
         return game;
     }
+    
 
     public GameState guess(char letter) {
         game.guessed.add(letter);
