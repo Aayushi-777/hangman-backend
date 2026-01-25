@@ -10,9 +10,17 @@ public class GameService {
     private GameState game;
 
     private Map<String, String[]> categories = Map.of(
-        "Animals", new String[]{"elephant", "tiger", "dog"},
-        "Fruits", new String[]{"apple", "banana", "mango"},
-        "Countries", new String[]{"india", "canada", "france"}
+        "Animals", new String[]{"elephant", "tiger", "blue whale", "dolphin", "coyote", "penguin", "chimpanzee", "squirrel",
+        "kangaroo", "panda", "orangutan", "hedgehog", "chameleon", "cheetah", "leopard", "woodpecker", "crocodile", "hippopotamus", 
+        "beluga whale", "bat"
+        },
+        "Movies", new String[]{"iron man", "jurassic park", "harry potter", "oppenheimer", "hunger games", "cruella", "maze runner",
+        "avengers", "dead poets society", "mrs doubtfire", "legally blonde", "easy a", "zootopia", "drishyam", "sooryavansham", "chupke chupke",
+        "five feet apart", "the great flood", "mission impossible", "top gun"
+        },
+        "Countries", new String[]{"india", "canada", "france", "australia", "germany", "south korea","greenland", "united states of america", "philippines",
+        "thailand", "united kingdom", "ukraine", "czech republic", "netherlands", "switzerland", "croatia", "lithuania", "luxembourg", "monaco", "afghanistan"
+        }
     );
 
     public GameState startGame(String category, String difficulty) {
