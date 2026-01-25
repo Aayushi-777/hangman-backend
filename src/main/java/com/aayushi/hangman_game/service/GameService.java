@@ -26,8 +26,9 @@ public class GameService {
     public GameState startGame(String category, String difficulty) {
         game = new GameState();
     
-        String[] words = categories.get(category);
-        game.word = words[new Random().nextInt(words.length)];
+        //String[] words = categories.get(category);
+        //game.word = words[new Random().nextInt(words.length)];
+        game.word = "iron man";
         game.maxAttempts = difficulty.equals("Hard") ? 5 :
                            difficulty.equals("Medium") ? 7 : 10;
         game.attempts = game.maxAttempts;
